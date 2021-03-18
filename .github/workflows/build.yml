@@ -16,11 +16,6 @@ jobs:
 
       - name: 编译Mycat镜像
         run: |
-          mkdir -p /tmp/data/mycat
-          cd /tmp/data/mycat
-          wget http://dl.mycat.org.cn/1.6.7.6/20201126013625/Mycat-server-1.6.7.6-release-20201126013625-linux.tar.gz
-          mv Mycat-server-1.6.7.6-release-20201126013625-linux.tar.gz mycat1.6.7.6.tar.gz
-          tar -zxvf mycat1.6.7.6.tar.gz -C /tmp/data/ mycat/conf
           wget https://raw.githubusercontent.com/AlphaYu/Adnc/master/doc/mycat/Dockerfile
           docker build -t 1635537446/mycat:1.6.7.6 .
 
