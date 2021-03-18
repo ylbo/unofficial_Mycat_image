@@ -16,8 +16,8 @@ jobs:
 
       - name: 编译Mycat镜像
         run: |
-          mkdir /root/data/mycat
-          cd /root/data/mycat
+          mkdir -p /tmp/data/mycat
+          cd /tmp/data/mycat
           wget http://dl.mycat.org.cn/1.6.7.6/20201126013625/Mycat-server-1.6.7.6-release-20201126013625-linux.tar.gz
           mv Mycat-server-1.6.7.6-release-20201126013625-linux.tar.gz mycat1.6.7.6.tar.gz
           tar -zxvf mycat1.6.7.6.tar.gz -C /root/data/ mycat/conf
